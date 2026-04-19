@@ -173,5 +173,8 @@ else:
             plt.tight_layout()
 
             st.pyplot(fig)
+        # Add an else block to handle API failures or rate limits
+        else:
+            st.error("⏳ **API Rate Limit Reached**: You are making requests too frequently. Please wait 1-2 minutes and try selecting the coins again. (This is a limitation of the CoinGecko Free API)")
     else:
         st.info("👈 Please select cryptocurrencies from the sidebar to view the chart.")
