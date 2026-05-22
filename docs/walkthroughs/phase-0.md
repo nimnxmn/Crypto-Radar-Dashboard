@@ -696,10 +696,10 @@ older training data. [AGENTS.md](../../AGENTS.md) exists precisely to flag this.
 > `node_modules/next/dist/docs/`. About a UI primitive: read its source in
 > `src/components/ui/`.
 
-A documentation nit found while writing this: `CLAUDE.md` says "Next.js 15", but
-[package.json](../../package.json) pins `next@16.2.6`. The behaviors above
-(Promise `params`, default Turbopack) are all Next 16. Worth correcting in
-`CLAUDE.md` later.
+A documentation nit found while writing this: `CLAUDE.md` originally said
+"Next.js 15", but [package.json](../../package.json) pins `next@16.2.6`. The
+behaviors above (Promise `params`, default Turbopack) are all Next 16 —
+`CLAUDE.md` has since been corrected to match.
 
 ---
 

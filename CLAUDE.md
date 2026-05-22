@@ -2,12 +2,12 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Heads up: Next.js 15 + Tailwind v4 + base-ui shadcn
+## Heads up: Next.js 16 + Tailwind v4 + base-ui shadcn
 
 Some conventions have changed since older training data — verify before relying on memory:
 
 - **Tailwind v4**: tokens live in [src/app/globals.css](src/app/globals.css) under `@import "tailwindcss"` and `@theme inline { ... }`. There is no `tailwind.config.ts`.
-- **Route params are `Promise`s** in Next.js 15. See [src/app/coin/[id]/page.tsx](src/app/coin/[id]/page.tsx): `{ params }: { params: Promise<{ id: string }> }`.
+- **Route params are `Promise`s** in Next.js 16. See [src/app/coin/[id]/page.tsx](src/app/coin/[id]/page.tsx): `{ params }: { params: Promise<{ id: string }> }`.
 - **shadcn here is built on `@base-ui/react`, NOT Radix.** Implications:
   - `Button` does **not** have `asChild`. To make a link look like a button, put `buttonVariants({ size, variant })` on the `<Link>` itself — see [src/app/page.tsx](src/app/page.tsx).
   - `TooltipProvider` takes `delay`, **not** `delayDuration`.
