@@ -39,6 +39,16 @@ The seven radar axes, their min/max bounds, and the `normalize()` function live 
 - Never `--force` push to `main`.
 - `gh` CLI is installed and authenticated; use it for PR creation.
 
+## Phase walkthroughs
+
+After **every phase** ships, write a teaching-oriented deep dive to
+`docs/walkthroughs/phase-N.md` — the repo owner is using this project to learn.
+For each file changed, explain *what it is*, *why it's written that way*, and
+*the gotcha a newer dev would miss* — don't just describe the code. This is a
+required deliverable of each phase, not optional.
+
+- **Phase 0** — [docs/walkthroughs/phase-0.md](docs/walkthroughs/phase-0.md).
+
 ## Phase status
 
 - **Phase 0** — scaffold + tokens + stubs: done, PR [#1](https://github.com/nimnxmn/Crypto-Radar-Dashboard/pull/1) (branch `nextjs-rewrite`).
