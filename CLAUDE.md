@@ -2,12 +2,12 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Heads up: Next.js 15 + Tailwind v4 + base-ui shadcn
+## Heads up: Next.js 16 + Tailwind v4 + base-ui shadcn
 
 Some conventions have changed since older training data — verify before relying on memory:
 
 - **Tailwind v4**: tokens live in [src/app/globals.css](src/app/globals.css) under `@import "tailwindcss"` and `@theme inline { ... }`. There is no `tailwind.config.ts`.
-- **Route params are `Promise`s** in Next.js 15. See [src/app/coin/[id]/page.tsx](src/app/coin/[id]/page.tsx): `{ params }: { params: Promise<{ id: string }> }`.
+- **Route params are `Promise`s** in Next.js 16. See [src/app/coin/[id]/page.tsx](src/app/coin/[id]/page.tsx): `{ params }: { params: Promise<{ id: string }> }`.
 - **shadcn here is built on `@base-ui/react`, NOT Radix.** Implications:
   - `Button` does **not** have `asChild`. To make a link look like a button, put `buttonVariants({ size, variant })` on the `<Link>` itself — see [src/app/page.tsx](src/app/page.tsx).
   - `TooltipProvider` takes `delay`, **not** `delayDuration`.
@@ -38,6 +38,16 @@ The seven radar axes, their min/max bounds, and the `normalize()` function live 
 - Pushes go through a **feature branch + PR** even for solo work — this is a portfolio repo, the PR diffs are the reviewable surface.
 - Never `--force` push to `main`.
 - `gh` CLI is installed and authenticated; use it for PR creation.
+
+## Phase walkthroughs
+
+After **every phase** ships, write a teaching-oriented deep dive to
+`docs/walkthroughs/phase-N.md` — the repo owner is using this project to learn.
+For each file changed, explain *what it is*, *why it's written that way*, and
+*the gotcha a newer dev would miss* — don't just describe the code. This is a
+required deliverable of each phase, not optional.
+
+- **Phase 0** — [docs/walkthroughs/phase-0.md](docs/walkthroughs/phase-0.md).
 
 ## Phase status
 
