@@ -48,11 +48,12 @@ For each file changed, explain *what it is*, *why it's written that way*, and
 required deliverable of each phase, not optional.
 
 - **Phase 0** — [docs/walkthroughs/phase-0.md](docs/walkthroughs/phase-0.md).
+- **Phase 1** — [docs/walkthroughs/phase-1.md](docs/walkthroughs/phase-1.md).
 
 ## Phase status
 
 - **Phase 0** — scaffold + tokens + stubs: done, PR [#1](https://github.com/nimnxmn/Crypto-Radar-Dashboard/pull/1) (branch `nextjs-rewrite`).
-- **Phase 1** — API routes (`src/app/api/coins/`, `src/app/api/coin/[id]/`), Recharts radar component in `src/components/radar/`, cmdk coin picker in `src/components/coin-picker/`, mobile sheet on `/compare`: **not started**.
+- **Phase 1** — API routes (`src/app/api/coins/`, `src/app/api/coin/[id]/`), Recharts radar component in `src/components/radar/`, cmdk coin picker in `src/components/coin-picker/`, mobile sheet on `/compare`: **done**, PR #2 (branch `phase-1-core`).
 - **Phase 2** — `/coin/[id]` detail page with sparkline, PNG snapshot export, preset chips, skeleton states.
 - **Phase 3** — Framer Motion micro-interactions, SEO + per-route OG images, Vercel Cron warmup, analytics, Lighthouse ≥95.
 - **Phase 4** (stretch) — auth (Clerk), Neon-backed watchlists, Resend email alerts.
